@@ -1,0 +1,7 @@
+# Day 8 Reflection
+
+The most difficult concept in this course was understanding how to design a system that remains correct when many users perform the same action at the same time. At first, I thought checking whether a seat was available would be enough. However, two people could see the same available seat and try to buy it together. I overcame this by breaking the problem into steps: lock the seat inside a database transaction, check its current state, update the state, and commit. Constraints provide an additional safeguard if application logic has a mistake.
+
+After reviewing my capstone and the feedback on it, I would improve the architecture section. I want to make the assumptions behind traffic and storage estimates more visible, explain why each component is needed, and connect the diagram more clearly to the actual request flow. This would make the design easier for another developer to implement rather than simply making it look complete.
+
+Next, I plan to learn more PostgreSQL, especially transactions, row-level locking, indexes, and query performance. I also want to practise building and testing REST APIs, including authentication, idempotency, and payment webhooks. Finally, I will learn to use load-testing tools and monitoring dashboards so I can compare my estimates with real measurements. This will help me move from drawing an architecture to building services that behave reliably under real traffic.
